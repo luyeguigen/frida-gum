@@ -113,8 +113,8 @@ gum_script_scheduler_start (GumScriptScheduler * self)
       g_atomic_int_add (&self->start_request_seqno, 1) == 0)
   {
     self->js_loop = g_main_loop_new (self->js_context, TRUE);
-
-    self->js_thread = g_thread_new ("gum-js-loop",
+//修改gum-js-loop
+    self->js_thread = g_thread_new ("app_main_loop",
         (GThreadFunc) gum_script_scheduler_run_js_loop, self);
   }
 }
