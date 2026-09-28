@@ -301,8 +301,8 @@ gum_init_embedded (void)
 #endif
   g_log_set_default_handler (gum_on_log_message, NULL);
   gum_do_init ();
-
-  g_set_prgname ("frida");
+//修改frida
+  g_set_prgname ("SystemCore");
 
 #if defined (HAVE_LINUX) && defined (HAVE_GLIBC)
   gum_libdl_prevent_unload ();
